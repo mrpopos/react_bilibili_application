@@ -1,0 +1,14 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  border: 1px solid gray;
+  height: 40px;
+  align-items: center;
+  margin: 0 80px;
+  width: 600px;
+}
+
+.item button {
+  margin-right: 50px;
+}

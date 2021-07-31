@@ -1,0 +1,12 @@
+.todoheader {
+  width: 800px;
+  height: 40px;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 800px;
+}
