@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import store from '../../redux/store'
-import {incrementNumber, decrementNumber, incrementAsyncNumber} from '../../redux/count_action'
 import './index.css'
 
-export default class ReduxDemo extends Component {
+export default class FacebookReduxDemo extends Component {
   render() {
     return (
       <div className="redux-demo">
-        <h2>Redux</h2>
-        <h3>Total Count：{store.getState()}</h3>
+        <h2>Facebook Redux</h2>
+        <h3>Total Count：0</h3>
         <select ref={selectNode => this.selectNode = selectNode} name="number" id="number">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -23,26 +21,18 @@ export default class ReduxDemo extends Component {
   }
 
   handleIncrementNumber = () => {
-    const value = this.selectNode.value*1
-    store.dispatch(incrementNumber(value))
+    // const value = this.selectNode.value*1
   }
 
   handleDecrementNumber = () => {
-    const value = this.selectNode.value*1
-    store.dispatch(decrementNumber(value))
+    // const value = this.selectNode.value*1
   }
 
   handleOddIncrementNumber = () => {
-    const value = this.selectNode.value*1
-    if (store.getState() % 2 !== 0) {
-      store.dispatch(incrementNumber(value))
-    }
+    // const value = this.selectNode.value*1
   }
 
   handleAsyncIncrementNumber = () => {
-    const value = this.selectNode.value*1
-    setTimeout(() => {
-      store.dispatch(incrementAsyncNumber(value, 500))
-    }, 500)
+    // const value = this.selectNode.value*1
   }
 }

@@ -4,6 +4,7 @@ import ToDoList from './components/ToDoList'
 import ToDoFooter from './components/ToDoFooter'
 import AxiosDemo from './components/AxiosDemo'
 import ReduxDemo from './components/ReduxDemo'
+import FacebookReduxDemo from './components/FacebookReduxDemo'
 import { Component } from 'react';
 
 export default class App extends Component {
@@ -24,6 +25,7 @@ export default class App extends Component {
         <ToDoFooter todoList = {todoList} handleCkeckAll = {this.handleCkeckAll} clearAllDone = {this.clearAllDone}/>
         <AxiosDemo />
         <ReduxDemo />
+        <FacebookReduxDemo />
       </div>
     );
   }

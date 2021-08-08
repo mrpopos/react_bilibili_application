@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios'
+// import axios from 'axios'
 import './index.css'
 
 export default class AxiosDemo extends Component {
@@ -27,14 +27,13 @@ export default class AxiosDemo extends Component {
     )
   }
 
-  componentDidMount() {
-    axios.get('/api/users/student').then(response => {
-      // console.log(response.data)
-      if (response.data.length) {
-        this.setState({ studentList: response.data })
-      }
-    }, error => {
-      console.log('error', error)
-    })
-  }
+  // componentDidMount() {
+  //   axios.get('/api/users/student').then(response => {
+  //     if (response.data.length) {
+  //       this.setState({ studentList: response.data })
+  //     }
+  //   }, error => {
+  //     console.log('error', error)
+  //   })
+  // }
 }
