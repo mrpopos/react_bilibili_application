@@ -3,10 +3,11 @@ import './index.css'
 
 export default class FacebookReduxDemo extends Component {
   render() {
+    const {count} = this.props
     return (
       <div className="redux-demo">
         <h2>Facebook Redux</h2>
-        <h3>Total Count：0</h3>
+        <h3>Total Count：{count}</h3>
         <select ref={selectNode => this.selectNode = selectNode} name="number" id="number">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -21,18 +22,28 @@ export default class FacebookReduxDemo extends Component {
   }
 
   handleIncrementNumber = () => {
-    // const value = this.selectNode.value*1
+    const {incrementNumber} = this.props
+    const value = this.selectNode.value*1
+    incrementNumber(value)
   }
 
   handleDecrementNumber = () => {
-    // const value = this.selectNode.value*1
+    const {decrementNumber} = this.props
+    const value = this.selectNode.value*1
+    decrementNumber(value)
   }
 
   handleOddIncrementNumber = () => {
-    // const value = this.selectNode.value*1
+    const {count, incrementNumber} = this.props
+    const value = this.selectNode.value*1
+    if (count % 2 !== 0) {
+      incrementNumber(value)
+    }
   }
 
   handleAsyncIncrementNumber = () => {
-    // const value = this.selectNode.value*1
+    const {incrementAsyncNumber} = this.props
+    const value = this.selectNode.value*1
+    incrementAsyncNumber(value, 500)
   }
 }

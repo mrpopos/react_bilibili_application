@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import store from '../../redux/store'
-import {incrementNumber, decrementNumber, incrementAsyncNumber} from '../../redux/count_action'
+import {incrementNumber, decrementNumber, incrementAsyncNumber} from '../../redux/actions/count'
 import './index.css'
 
 export default class ReduxDemo extends Component {

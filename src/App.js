@@ -3,8 +3,10 @@ import ToDoHeader from './components/ToDoHeader'
 import ToDoList from './components/ToDoList'
 import ToDoFooter from './components/ToDoFooter'
 import AxiosDemo from './components/AxiosDemo'
-import ReduxDemo from './components/ReduxDemo'
-import FacebookReduxDemo from './components/FacebookReduxDemo'
+// import ReduxDemo from './components/ReduxDemo'
+import Count from './containers/Count'
+import Cars from './containers/Cars'
+
 import { Component } from 'react';
 
 export default class App extends Component {
@@ -24,8 +26,10 @@ export default class App extends Component {
         <ToDoList todoList = {todoList} modifyChecked = {this.modifyChecked} handleDelete = {this.handleDelete} />
         <ToDoFooter todoList = {todoList} handleCkeckAll = {this.handleCkeckAll} clearAllDone = {this.clearAllDone}/>
         <AxiosDemo />
-        <ReduxDemo />
-        <FacebookReduxDemo />
+        {/* <ReduxDemo /> */}
+        {/* <FacebookReduxDemo /> */}
+        <Count />
+        <Cars />
       </div>
     );
   }
