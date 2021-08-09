@@ -7,8 +7,7 @@ import './index.css'
 
 class FacebookReduxDemo extends Component {
   render() {
-    // console.log('*****', this.props)
-    const {count, cars} = this.props.countCmpn
+    const {count, cars} = this.props
     return (
       <div className="redux-demo">
         <h2>Facebook Redux&lt;数据共享&gt;</h2>
@@ -55,11 +54,14 @@ class FacebookReduxDemo extends Component {
 }
 // 链接UI组件与redux
 export default connect(
-  state => ({countCmpn: state}),
+  state => ({
+    count: state.count,
+    cars: state.cars
+  }),
   // 简写后
     {
-      incrementNumber: incrementNumber,
-      decrementNumber: decrementNumber,
-      incrementAsyncNumber: incrementAsyncNumber
+      incrementNumber,
+      decrementNumber,
+      incrementAsyncNumber
     }
 )(FacebookReduxDemo)
