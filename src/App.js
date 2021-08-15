@@ -6,6 +6,7 @@ import AxiosDemo from './components/AxiosDemo'
 // import ReduxDemo from './components/ReduxDemo'
 import Count from './containers/Count'
 import Cars from './containers/Cars'
+import RouterDemo from './components/RouterDemo'
 
 import { Component } from 'react';
 
@@ -30,6 +31,7 @@ export default class App extends Component {
         {/* <FacebookReduxDemo /> */}
         <Count />
         <Cars />
+        <RouterDemo />
       </div>
     );
   }
