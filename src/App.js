@@ -1,4 +1,4 @@
-import './App.css';
+import { Component } from 'react'
 import ToDoHeader from './components/ToDoHeader'
 import ToDoList from './components/ToDoList'
 import ToDoFooter from './components/ToDoFooter'
@@ -7,9 +7,10 @@ import AxiosDemo from './components/AxiosDemo'
 import Count from './containers/Count'
 import Cars from './containers/Cars'
 import RouterDemo from './components/RouterDemo'
-
-import { Component } from 'react';
-
+import AsyncState from './components/AsyncState'
+import People from './components/UseState'
+import Tittle from './components/UseEffect'
+import './App.css'
 export default class App extends Component {
 
   state = {todoList: [
@@ -32,6 +33,9 @@ export default class App extends Component {
         <Count />
         <Cars />
         <RouterDemo />
+        <AsyncState />
+        <People name="melpopos" age={15} info={{ a: 1, b:2 }} />
+        <Tittle />
       </div>
     );
   }
